@@ -1,7 +1,9 @@
 .experience {
     padding: 50px;
     background: #e9ecef;
+    color: #000000;
   }
+  
   
   .experience-container {
     display: flex;

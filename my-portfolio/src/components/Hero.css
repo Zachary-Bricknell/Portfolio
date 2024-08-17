@@ -1,30 +1,81 @@
+.hero-content h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-left: 20px; /* Shift the header to the right */
+}
+
+.hero-content p {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: black;
+  display: flex;
+  align-items: baseline;
+  margin: 0;
+  margin-left: 40px; /* Shift the paragraph to the right more */
+}
+
+.hero-content h1 .name-highlight {
+  color: #6c63ff; /* The color used for "Zach" */
+}
+
+.hero-content p .typed-text-container {
+  color: #6c63ff; /* Apply the same color to the typed text */
+}
+
+.typed-text-container {
+  display: inline-block;
+  white-space: nowrap;
+  margin-left: 4px;
+}
+
+
+
+body {
+  margin: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
 .hero {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #87CEFA; /* Light blue background */
-  overflow: hidden;
+  background-color: #87CEFA;
+  overflow: visible;
 }
 
 .hero-content {
   position: relative;
-  z-index: 2; /* Ensure content appears above the clouds */
-  max-width: 600px;
+  z-index: 2;
+  width: 400px; /* Slightly larger width */
+  height: 400px; /* Adjust the height to fit the cloud image */
   text-align: center;
-  background: rgba(0, 0, 0, 0.5); /* Transparent black background */
-  padding: 20px 40px;
+  background-image: url('../assets/images/gcloud_2.png');
+  background-size: 50%; /* Scale the cloud down to 50% of the container */
+  background-repeat: no-repeat;
+  background-position: center center; /* Center the cloud image both horizontally and vertically */
+  padding: 20px;
   border-radius: 10px;
+  color: black;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center the text content vertically */
+  opacity: 70%;
 }
 
+
+
+
+
 .name-highlight {
-  color: #6c63ff; /* Highlight color */
+  color: #6c63ff; /* Keep the name highlight color */
 }
 
 .hero-content p {
   font-size: 1.5rem;
-  color: #6c63ff;
 }
 
 .clouds {
@@ -38,5 +89,6 @@
 
 .cloud {
   position: absolute;
-  opacity: 0.7;
+  opacity: 0; /* Ensure initial opacity is 0 */
+  pointer-events: none; /* Ensure clouds don't interfere with any interactions */
 }

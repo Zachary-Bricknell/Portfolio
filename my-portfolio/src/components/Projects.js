@@ -3,18 +3,17 @@ import './Projects.css';
 
 const projects = [
   {
-    title: 'Project 1',
-    description: 'A brief description of your project.',
+    title: 'LiDAR Noise Reducer',
+    description: 'LiDAR Noise reduction in raw scans of Red Pine trees for the MNRF.',
     technologies: ['React', 'Node.js', 'Express'],
     link: 'https://github.com/yourusername/project1',
   },
   {
-    title: 'Project 2',
-    description: 'A brief description of your project.',
-    technologies: ['Python', 'Flask', 'PostgreSQL'],
-    link: 'https://github.com/yourusername/project2',
+    title: 'LiDAR Noise Reducer',
+    description: 'LiDAR Noise reduction in raw scans of Red Pine trees for the MNRF.',
+    technologies: ['React', 'Node.js', 'Express'],
+    link: 'https://github.com/yourusername/project1',
   },
-  // Add more projects as needed
 ];
 
 const Projects = () => {

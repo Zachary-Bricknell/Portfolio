@@ -5,7 +5,7 @@ const Contact = () => {
   return (
     <section className="contact">
       <h2>Contact</h2>
-      <p>Feel free to reach out to me on any of my social media platforms, or send me an email directly.</p>
+      <p>Feel free to reach out to me on any of my social media platforms, or send me an email directly, When this is working</p>
       <form className="contact-form">
         <input type="text" placeholder="Your Name" required />
         <input type="email" placeholder="Your Email" required />

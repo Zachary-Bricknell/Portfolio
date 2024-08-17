@@ -1,10 +1,12 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
+import { ReactTyped } from 'react-typed'; // Updated import
 import './Hero.css';
 
 import cloud1 from '../assets/images/cloud1.png';
 import cloud2 from '../assets/images/cloud2.png';
 import cloud3 from '../assets/images/cloud3.png';
+import gcloud from '../assets/images/gcloud_2.png'; // Import your image
 
 const cloudImages = [cloud1, cloud2, cloud3];
 
@@ -23,31 +25,46 @@ const Hero = () => {
 
     const spawnCloud = () => {
       if (cloudContainerRef.current.children.length > 10) return; // Limit to 10 clouds at once
-      
+
       const cloud = document.createElement("img");
       const randomCloud = cloudImages[Math.floor(Math.random() * cloudImages.length)];
       cloud.src = randomCloud;
       cloud.className = "cloud";
-      
+
       // Randomize cloud properties
       const cloudSize = gsap.utils.random(150, 300); // Size between 150px and 300px
-      const startPosition = gsap.utils.random(-200, -100); // Start offscreen
-      const verticalPosition = gsap.utils.random(0, 70); // Random vertical position
-      const speed = gsap.utils.random(15, 40); // Speed between 15s and 40s
+      const startPositionX = gsap.utils.random(0, window.innerWidth - cloudSize); // Random horizontal position within the viewport
+      const startPositionY = gsap.utils.random(0, window.innerHeight - cloudSize); // Random vertical position within the viewport
+      const moveRight = Math.random() > 0.5; // Randomly choose direction: true for right, false for left
+      const endPositionX = moveRight ? window.innerWidth + 200 : -200; // Move off-screen left or right
+      const duration = gsap.utils.random(10, 20); // Duration between 10s and 20s
 
       cloud.style.width = `${cloudSize}px`;
-      cloud.style.top = `${verticalPosition}%`;
-      cloud.style.left = `${startPosition}px`;
-      
+      cloud.style.left = `${startPositionX}px`;
+      cloud.style.top = `${startPositionY}px`;
+      cloud.style.opacity = 0; // Start with 0% opacity
+
       cloudContainerRef.current.appendChild(cloud);
 
       // Animate cloud
       gsap.to(cloud, {
-        x: window.innerWidth + 200,
-        duration: speed,
+        x: endPositionX, // Move either right or left
+        duration: duration, // Move duration
         ease: "linear",
+      });
+
+      gsap.to(cloud, {
+        opacity: 0.7, // Fade in to 70%
+        duration: 2, // 2 seconds for fade-in
         onComplete: () => {
-          cloud.remove(); // Remove cloud after it moves offscreen
+          gsap.to(cloud, {
+            opacity: 0, // Fade out to 0% opacity
+            duration: 2, // 2 seconds for fade-out
+            delay: duration - 4, // Ensure it starts fading out before it completes its movement
+            onComplete: () => {
+              cloud.remove(); // Remove cloud after fade-out
+            }
+          });
         }
       });
     };
@@ -60,9 +77,23 @@ const Hero = () => {
   return (
     <section className="hero">
       <div className="clouds" ref={cloudContainerRef}></div>
-      <div className="hero-content">
+      <div className="hero-content" style={{ backgroundImage: `url(${gcloud})`, backgroundSize: 'cover' }}>
         <h1>Hi, I am <span className="name-highlight">Zach</span>.</h1>
-        <p>I am a Software Developer.</p>
+        <p>
+          <span>I am a</span>
+          <span className="typed-text-container">
+            <ReactTyped
+              strings={[
+                " Software Developer.",
+                " Backend Developer.",
+                " Full-Stack Developer.",
+              ]}
+              typeSpeed={40}
+              backSpeed={50}
+              loop
+            />
+          </span>
+        </p>
       </div>
     </section>
   );
