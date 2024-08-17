@@ -1,0 +1,27 @@
+.experience {
+    padding: 50px;
+    background: #e9ecef;
+  }
+  
+  .experience-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .experience-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .experience-card h3 {
+    margin: 0;
+  }
+  
+  .experience-card h4 {
+    margin: 5px 0;
+    color: #6c757d;
+  }
+  
