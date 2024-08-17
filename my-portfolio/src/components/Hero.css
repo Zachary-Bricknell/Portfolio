@@ -2,6 +2,8 @@
 body {
   margin: 0;
   overflow-x: hidden; /* Prevent horizontal scrolling */
+  font-family: Arial, sans-serif;
+  background-color: #87CEFA;
 }
 
 .hero {
@@ -11,26 +13,28 @@ body {
   align-items: center;
   height: 100vh;
   background-color: #87CEFA;
-  overflow: visible;
+  overflow: hidden; /* Prevent any overflow issues */
+  width: 100%; /* Ensure hero takes up the full width */
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
-  width: 400px; /* Slightly larger width */
-  height: 400px; /* Adjust the height to fit the cloud image */
+  width: 400px; /* Width of the content */
+  max-width: 100%; /* Ensure it never exceeds 100% of the viewport */
+  height: 400px; /* Height of the content */
   text-align: center;
   background-image: url('../assets/images/gcloud_2.png');
-  background-size: 50%; /* Scale the cloud down to 50% of the container */
+  background-size: auto; /* Do not resize the cloud image */
   background-repeat: no-repeat;
-  background-position: center center; /* Center the cloud image both horizontally and vertically */
+  background-position: center center;
   padding: 20px;
   border-radius: 10px;
   color: black;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Center the text content vertically */
+  justify-content: center;
   opacity: 70%;
 }
 
@@ -38,7 +42,6 @@ body {
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 20px;
-  margin-left: 20px; /* Shift the header to the right */
 }
 
 .hero-content p {
@@ -48,7 +51,7 @@ body {
   display: flex;
   align-items: baseline;
   margin: 0;
-  margin-left: 40px; /* Shift the paragraph to the right more */
+  margin-left: 40px; /* Shift the paragraph to the right */
 }
 
 .hero-content h1 .name-highlight {
@@ -79,56 +82,40 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  pointer-events: none; /* Ensure clouds don't interfere with any interactions */
+  pointer-events: none;
 }
 
 .cloud {
   position: absolute;
-  opacity: 0; /* Ensure initial opacity is 0 */
-  pointer-events: none; /* Ensure clouds don't interfere with any interactions */
+  opacity: 0;
+  pointer-events: none;
 }
 
-/* Mobile Styles */
+/* Media Query for Smaller Screens */
 @media (max-width: 768px) {
   .hero-content {
-    width: 90%; /* Make the content take up more width on mobile */
-    height: auto; /* Let the height adjust based on content */
-    background-size: contain; /* Ensure the background image scales properly */
+    background-image: none !important; /* Force hide the gcloud_2 image */
+    background-color: rgba(0, 0, 0, 0.7); /* Add a red background with 70% opacity */
     padding: 20px;
+    margin-right: 60px;
+    width: 100vw; /* Ensure the container spans the full viewport width */
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+
+  .hero {
+    background-color: #87CEFA; /* Keep the full hero background color consistent */
   }
 
   .hero-content h1 {
     font-size: 2rem; /* Reduce font size for smaller screens */
-    margin-left: 10px; /* Adjust margin for smaller screens */
   }
 
   .hero-content p {
     font-size: 1.5rem; /* Adjust font size for mobile */
-    margin-left: 20px; /* Adjust margin for smaller screens */
+    margin-left: 0; /* Center the paragraph */
     flex-direction: column; /* Stack elements vertically */
     align-items: center; /* Center align content */
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-content {
-    background-image: none; /* Remove the background image entirely on very small screens */
-    padding: 20px;
-    width: 100%;
-  }
-
-  .hero-content h1 {
-    font-size: 1.8rem; /* Further reduce the font size */
-    margin-left: 0; /* Center the title on mobile */
-  }
-
-  .hero-content p {
-    font-size: 1.3rem; /* Smaller font size for very small screens */
-    margin-left: 0; /* Center the paragraph on mobile */
-  }
-
-  .typed-text-container {
-    width: 100%; /* Full width on very small screens */
-    text-align: center; /* Center the typed text */
   }
 }
