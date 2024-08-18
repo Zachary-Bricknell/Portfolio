@@ -92,16 +92,16 @@ body {
     width: 450px; /* Set the same width as the desktop version */
     height: 400px; /* Keep the same height */
     padding: 20px; /* Keep the padding consistent */
-    font-size: 1.8rem; /* Ensure the font size stays consistent */
+    font-size: 1.4rem; /* Ensure the font size stays consistent */
     background-size: contain; /* Keep the background image consistent */
   }
 
   .hero-content h1 {
-    font-size: 2.5rem; /* Keep the font size consistent */
+    font-size: 2rem; /* Keep the font size consistent */
   }
 
   .hero-content p {
     margin-left: 40px; /* Maintain the margin */
-    font-size: 1.8rem; /* Ensure the font size stays consistent */
+    font-size: 1.4rem; /* Ensure the font size stays consistent */
   }
 }
