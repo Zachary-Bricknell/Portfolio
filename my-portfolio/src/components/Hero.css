@@ -100,7 +100,8 @@ body {
   }
 
   .cloud {
-    width: 70%; /* Further reduce cloud size for small screens */
-    max-width: 250px;
+    width: 60%; /* Further reduce cloud size for small screens */
+    max-width: 200px;
+    top: 5%; /* Add some space from the top */
   }
 }
