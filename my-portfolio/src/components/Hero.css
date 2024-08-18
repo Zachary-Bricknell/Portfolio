@@ -18,20 +18,17 @@ body {
 }
 
 .hero-content {
-  position: relative;
+  position: absolute;
   z-index: 2;
-  width: 450px; /* Ensure width is consistent */
+  width: 375px; 
   max-width: 100%; 
-  height: 400px; /* Ensure consistent height */
+  height: 375px; 
   text-align: center;
-  background-image: url('../assets/images/gcloud_2.png');
-  background-size: contain; /* Ensure the entire image is scaled */
+  background-size: auto; 
   background-repeat: no-repeat;
   background-position: center center;
-  padding: 20px;
-  border-radius: 10px;
   color: black;
-  margin: 0 auto;
+  margin: 2 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -39,13 +36,13 @@ body {
 }
 
 .hero-content h1 {
-  font-size: 2.5rem; /* Keep the font size consistent */
+  font-size: 2.5rem;
   font-weight: bold;
-  margin-bottom: 20px; /* Maintain spacing */
+  margin-bottom: 20px;
 }
 
 .hero-content p {
-  font-size: 1.8rem; /* Keep the font size consistent */
+  font-size: 1.8rem;
   font-weight: bold;
   color: black;
   display: flex;
@@ -72,6 +69,10 @@ body {
   color: #6c63ff; /* Keep the name highlight color */
 }
 
+.hero-content p {
+  font-size: 1.5rem;
+}
+
 .clouds {
   position: absolute;
   top: 0;
@@ -85,23 +86,4 @@ body {
   position: absolute;
   opacity: 0;
   pointer-events: none;
-}
-
-@media (max-width: 600px) {
-  .hero-content {
-    width: 450px; /* Set the same width as the desktop version */
-    height: 400px; /* Keep the same height */
-    padding: 20px; /* Keep the padding consistent */
-    font-size: 1.4rem; /* Ensure the font size stays consistent */
-    background-size: contain; /* Keep the background image consistent */
-  }
-
-  .hero-content h1 {
-    font-size: 2rem; /* Keep the font size consistent */
-  }
-
-  .hero-content p {
-    margin-left: 40px; /* Maintain the margin */
-    font-size: 1.4rem; /* Ensure the font size stays consistent */
-  }
 }

@@ -80,7 +80,7 @@ const Hero = () => {
       <div  className="hero-content" style={{ backgroundImage: `url(${gcloud})`, backgroundSize: 'cover' }}>
         <h1>Hi, I am <span className="name-highlight">Zach</span>.</h1>
         <p>
-          <span>I am a</span>
+          <span>I do</span>
           <span className="typed-text-container">
             <ReactTyped
               strings={[
