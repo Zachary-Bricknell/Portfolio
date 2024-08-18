@@ -4,15 +4,21 @@ import './Projects.css';
 const projects = [
   {
     title: 'LiDAR Noise Reducer',
-    description: 'LiDAR Noise reduction in raw scans of Red Pine trees for the MNRF.',
-    technologies: ['React', 'Node.js', 'Express'],
-    link: 'https://github.com/yourusername/project1',
+    description: `Developed a comprehensive LiDAR noise reduction system to process raw scans of Red Pine trees for the Ministry of Natural Resources and Forestry (MNRF). 
+    This involved creating custom algorithms to filter out noise and enhance the clarity of the data, which was crucial for improving forestry management decisions. 
+    The project utilized Python for processing and analysis, with a robust frontend built using React and PyQt to visualize the results. The project resulted in 
+    an overall success, highlighting the potential for technology to reduce the need for destructive sampling of Trees.`,
+    technologies: ['Python', 'JavaScript', 'SQL', 'Beautiful Soup', 'Selenium'],
+    link: 'https://github.com/Zachary-Bricknell/Project_Pinecone',
   },
   {
-    title: 'LiDAR Noise Reducer',
-    description: 'LiDAR Noise reduction in raw scans of Red Pine trees for the MNRF.',
-    technologies: ['React', 'Node.js', 'Express'],
-    link: 'https://github.com/yourusername/project1',
+    title: 'TrentUBuddy Discord Bot',
+    description: `Designed and implemented a Discord bot named TrentUBuddy to streamline and automate the process of answering student queries at Trent University. 
+    The bot was capable of scraping relevant information from the university's website and providing immediate, accurate responses to students. 
+    Over 100 students participated in a beta test, leading to refinements that significantly improved the bot’s functionality. 
+    This project was built with Python, leveraging libraries such as Beautiful Soup and Selenium for data scraping and processing.`,
+    technologies: ['Python', 'JavaScript', 'SQL', 'Beautiful Soup', 'Selenium'],
+    link: 'https://github.com/Zachary-Bricknell/TrentUBuddy',
   },
 ];
 

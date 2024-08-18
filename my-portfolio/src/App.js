@@ -21,8 +21,8 @@ function App() {
       <SocialMediaSidebar />
       <Hero />
       <About />
-      <Projects />
       <Experience />
+      <Projects />
       <Contact />
       <Footer />
     </div>
