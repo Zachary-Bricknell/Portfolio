@@ -18,14 +18,14 @@ body {
 }
 
 .hero-content {
-  position: relative;
+  position: absolute;
   z-index: 2;
-  width: 400px; /* Width of the content */
-  max-width: 100%; /* Ensure it never exceeds 100% of the viewport */
-  height: 400px; /* Height of the content */
+  width: 400px; 
+  max-width: 100%; 
+  height: 400px; 
   text-align: center;
   background-image: url('../assets/images/gcloud_2.png');
-  background-size: auto; /* Do not resize the cloud image */
+  background-size: auto; 
   background-repeat: no-repeat;
   background-position: center center;
   padding: 20px;
@@ -89,33 +89,4 @@ body {
   position: absolute;
   opacity: 0;
   pointer-events: none;
-}
-
-/* Media Query for Smaller Screens */
-@media (max-width: 768px) {
-  .hero-content {
-    background-image: none !important; /* Force hide the gcloud_2 image */
-    background-color: rgba(0, 0, 0, 0.7); /* Add a red background with 70% opacity */
-    padding: 20px;
-    margin-right: 60px;
-    width: 100vw; /* Ensure the container spans the full viewport width */
-    position: absolute;
-    left: 0;
-    right: 0;
-  }
-
-  .hero {
-    background-color: #87CEFA; /* Keep the full hero background color consistent */
-  }
-
-  .hero-content h1 {
-    font-size: 2rem; /* Reduce font size for smaller screens */
-  }
-
-  .hero-content p {
-    font-size: 1.5rem; /* Adjust font size for mobile */
-    margin-left: 0; /* Center the paragraph */
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center; /* Center align content */
-  }
 }

@@ -75,9 +75,9 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="hero">
+    <div className="hero">
       <div className="clouds" ref={cloudContainerRef}></div>
-      <div className="hero-content" style={{ backgroundImage: `url(${gcloud})`, backgroundSize: 'cover' }}>
+      <div  className="hero-content" style={{ backgroundImage: `url(${gcloud})`, backgroundSize: 'cover' }}>
         <h1>Hi, I am <span className="name-highlight">Zach</span>.</h1>
         <p>
           <span>I am a</span>
@@ -95,7 +95,7 @@ const Hero = () => {
           </span>
         </p>
       </div>
-    </section>
+    </div>
   );
 };
 
