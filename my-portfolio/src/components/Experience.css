@@ -7,8 +7,8 @@
 .experience h2 {
   text-align: center;
   margin-bottom: 40px;
-  font-size: 2.5rem;
-  color: #333333;
+  font-size: 3.5rem; /* Consistent font size with about-section h2 */
+  color: #000000; /* Consistent color */
 }
 
 .experience-container {
@@ -43,18 +43,18 @@
 
 .experience-card h3 {
   margin: 0;
-  font-size: 1.8rem; /* Larger font for company name */
-  color: #007bff;
+  font-size: 1.8rem; /* Consistent font size with about-section h2 */
+  color: #007bff; /* Consistent color */
 }
 
 .experience-card h4 {
   margin: 5px 0;
   color: #6c757d;
-  font-size: 1.5rem; /* Adjusted font size for role */
+  font-size: 1.5rem; /* Consistent font size with about-section p */
 }
 
 .experience-card p {
-  font-size: 1.2rem; /* Increased font size for better readability */
+  font-size: 1.2rem; /* Consistent font size with about-section p */
   color: #666666;
   margin: 10px 0 0; /* Better spacing around text */
 }
@@ -66,20 +66,22 @@
   }
 
   .experience-card h3 {
-    font-size: 2rem;
+    font-size: 3rem; /* Consistent font size with about-section h2 for larger screens */
   }
 
-  .experience-card p {
-    font-size: 1.5rem;
+  .experience-card p,
+  .experience-card h4 {
+    font-size: 1.5rem; /* Consistent font size with about-section p for larger screens */
   }
 }
 
 @media (min-width: 1200px) {
   .experience-card h3 {
-    font-size: 2.5rem;
+    font-size: 3.5rem; /* Consistent font size with about-section h2 for larger screens */
   }
 
-  .experience-card p {
-    font-size: 1.8rem;
+  .experience-card p,
+  .experience-card h4 {
+    font-size: 1.8rem; /* Consistent font size with about-section p for larger screens */
   }
 }

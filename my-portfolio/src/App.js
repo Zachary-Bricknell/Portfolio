@@ -5,7 +5,6 @@ import About from './components/About';
 import Projects from './components/Projects';
 import Experience from './components/Experience';
 import Contact from './components/Contact';
-import SocialMediaSidebar from './components/SocialMediaSidebar';
 import Footer from './components/FooterComponent'; 
 import './App.css';
 
@@ -18,7 +17,6 @@ function App() {
         <Link to="experience" smooth={true} duration={500}>Experience</Link>
         <Link to="contact" smooth={true} duration={500}>Contact</Link>
       </nav>
-      <SocialMediaSidebar />
       <Hero />
       <About />
       <Experience />

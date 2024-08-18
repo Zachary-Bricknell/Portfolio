@@ -78,9 +78,9 @@ const Hero = () => {
     <div className="hero">
       <div className="clouds" ref={cloudContainerRef}></div>
       <div  className="hero-content" style={{ backgroundImage: `url(${gcloud})`, backgroundSize: 'cover' }}>
-        <h1>Hi, I am <span className="name-highlight">Zach</span>.</h1>
+        <h1>Hi, it's <span className="name-highlight">Zach</span>.</h1>
         <p>
-          <span>I do</span>
+          <span>I'm a</span>
           <span className="typed-text-container">
             <ReactTyped
               strings={[
