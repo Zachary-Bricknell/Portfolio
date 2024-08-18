@@ -2,9 +2,11 @@ import React from 'react';
 import './Footer.css';
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear(); // Fetch the current year
+
   return (
     <footer className="footer">
-      <p>© Zachary Bricknell 2024. All rights reserved.</p>
+      <p>© Zachary Bricknell {currentYear}. All rights reserved.</p>
     </footer>
   );
 };

@@ -7,21 +7,28 @@
 .experience h2 {
   text-align: center;
   margin-bottom: 40px;
-  font-size: 3.5rem; /* Consistent font size with about-section h2 */
+  font-size: 3.5rem; /* Consistent font size with Projects section */
   color: #000000; /* Consistent color */
 }
 
 .experience-container {
   display: flex;
   flex-direction: column;
-  gap: 30px; /* Increased gap for better spacing */
+  align-items: center;
+  gap: 30px; /* Consistent gap */
+  width: 100%;
+  max-width: 800px; /* Consistent max-width */
+  margin: 0 auto; /* Centering the container */
+  padding: 0 20px; /* Ensure there's consistent padding */
 }
 
 .experience-card {
   background: white;
-  padding: 30px; /* Increased padding for more spacious feel */
+  padding: 30px; /* Consistent padding */
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 800px; /* Ensure max-width is consistent with Projects section */
   transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.6s ease-out, transform 0.6s ease-out;
   opacity: 0; /* Initially hidden */
   transform: translateY(50px); /* Slide in from below */
@@ -43,18 +50,18 @@
 
 .experience-card h3 {
   margin: 0;
-  font-size: 1.8rem; /* Consistent font size with about-section h2 */
+  font-size: 1.8rem; /* Consistent font size */
   color: #007bff; /* Consistent color */
 }
 
 .experience-card h4 {
   margin: 5px 0;
   color: #6c757d;
-  font-size: 1.5rem; /* Consistent font size with about-section p */
+  font-size: 1.5rem; /* Consistent font size */
 }
 
 .experience-card p {
-  font-size: 1.2rem; /* Consistent font size with about-section p */
+  font-size: 1.2rem; /* Consistent font size */
   color: #666666;
   margin: 10px 0 0; /* Better spacing around text */
 }
@@ -66,22 +73,22 @@
   }
 
   .experience-card h3 {
-    font-size: 3rem; /* Consistent font size with about-section h2 for larger screens */
+    font-size: 3rem; /* Consistent font size for larger screens */
   }
 
   .experience-card p,
   .experience-card h4 {
-    font-size: 1.5rem; /* Consistent font size with about-section p for larger screens */
+    font-size: 1.5rem; /* Consistent font size for larger screens */
   }
 }
 
 @media (min-width: 1200px) {
   .experience-card h3 {
-    font-size: 3.5rem; /* Consistent font size with about-section h2 for larger screens */
+    font-size: 3.5rem; /* Consistent font size for larger screens */
   }
 
   .experience-card p,
   .experience-card h4 {
-    font-size: 1.8rem; /* Consistent font size with about-section p for larger screens */
+    font-size: 1.8rem; /* Consistent font size for larger screens */
   }
 }
