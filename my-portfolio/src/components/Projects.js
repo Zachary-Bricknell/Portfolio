@@ -32,7 +32,7 @@ const Projects = () => {
           }
         });
       },
-      { threshold: 1 }
+      { threshold: 0.5 }
     );
 
     projectRefs.current.forEach((project) => {
