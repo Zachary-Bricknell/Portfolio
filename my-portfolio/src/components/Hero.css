@@ -15,17 +15,20 @@ body {
   background-color: #87CEFA;
   overflow: hidden; /* Prevent any overflow issues */
   width: 100%; /* Ensure hero takes up the full width */
+  padding-left: 20px;  /* Add padding to hero for some space */
+  padding-right: 20px; /* Add padding to hero for some space */
+  box-sizing: border-box; /* Include padding in width calculation */
 }
 
 .hero-content {
-  position: absolute;
+  position: relative; /* Changed from absolute to relative */
   z-index: 2;
-  width: 400px; 
-  max-width: 100%; 
-  height: 400px; 
+  width: 400px;
+  max-width: calc(100% - 40px); /* Reduce width based on padding */
+  height: 400px;
   text-align: center;
   background-image: url('../assets/images/gcloud_2.png');
-  background-size: auto; 
+  background-size: contain; /* Ensure the entire image is scaled */
   background-repeat: no-repeat;
   background-position: center center;
   padding: 20px;
@@ -36,7 +39,6 @@ body {
   flex-direction: column;
   justify-content: center;
   opacity: 70%;
-  padding: 10%;
 }
 
 .hero-content h1 {
@@ -52,7 +54,6 @@ body {
   display: flex;
   align-items: baseline;
   margin: 0;
-  margin-left: 40px; /* Shift the paragraph to the right */
 }
 
 .hero-content h1 .name-highlight {
@@ -91,4 +92,3 @@ body {
   opacity: 0;
   pointer-events: none;
 }
-
