@@ -1,35 +1,75 @@
 .contact {
-    padding: 50px;
-    background: #f5f5f5;
-    text-align: center;
-    color: #000000;
+  padding: 50px;
+  background: #f5f5f5; /* Light grey background */
+  text-align: center;
+  color: #000000;
+}
+
+.contact h2 {
+  margin-bottom: 40px;
+  font-size: 1.8rem; /* Consistent font size for h2 */
+  color: #007bff; /* Matching color with other sections */
+}
+
+.contact p {
+  font-size: 1.2rem; /* Consistent paragraph font size */
+  color: #666666; /* Consistent color with other sections */
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1.2rem; /* Consistent input font size */
+}
+
+.contact-form button {
+  padding: 10px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.2rem; /* Consistent button font size */
+}
+
+.contact-form button:hover {
+  background: #0056b3;
+}
+
+/* Media Queries for responsive design */
+@media (min-width: 768px) {
+  .contact h2 {
+    font-size: 3rem; /* Match the h2 size for larger screens */
   }
-  
-  .contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  
+
+  .contact p,
   .contact-form input,
-  .contact-form textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
+  .contact-form textarea,
   .contact-form button {
-    padding: 10px;
-    background: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+    font-size: 1.5rem; /* Match the font sizes for larger screens */
   }
-  
-  .contact-form button:hover {
-    background: #0056b3;
+}
+
+@media (min-width: 1200px) {
+  .contact h2 {
+    font-size: 3.5rem; /* Match the h2 size for larger screens */
   }
-  
+
+  .contact p,
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form button {
+    font-size: 1.8rem; /* Match the font sizes for larger screens */
+  }
+}
