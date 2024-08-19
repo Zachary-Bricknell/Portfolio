@@ -1,54 +1,153 @@
+/* About Section */
+.about-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  background-color: #2b2b2b;
+  color: #fff;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.profile-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.profile-picture {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto 0;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.about-section-content {
+  background-color: #333333;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 800px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.about-section-content.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-section-content.alternate {
+  background-color: #444444;
+}
+
+.about-section-content:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.about-section-content h2 {
+  font-size: 1.8rem;
+  color: #007bff;
+  text-align: center;
+}
+
+.about-section-content p {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 10px 0 0;
+}
+
+@media (min-width: 768px) {
+  .about-section-content h2 {
+    font-size: 3rem;
+  }
+
+  .about-section-content p {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .about-section-content h2 {
+    font-size: 3.5rem;
+  }
+
+  .about-section-content p {
+    font-size: 1.8rem;
+  }
+}
+
+/* Projects Section */
 .projects {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 60px 20px; /* Adjusted padding for better layout on smaller screens */
-  background: #e9ecef; /* Light grey background for the whole section */
+  padding: 60px 20px;
+  background: #2b2b2b;
   color: #000000;
-  width: 100%; /* Ensure the section takes the full width */
-  box-sizing: border-box; /* Include padding and border in the element's width */
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .projects h2 {
   text-align: center;
   margin-bottom: 40px;
-  font-size: 3.5rem; /* Consistent font size with Experience section */
-  color: #000000; /* Consistent color */
+  font-size: 3.5rem;
+  color: #fff; /* Ensure consistency with about section */
 }
 
 .projects-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px; /* Consistent gap */
-  width: 100%; /* Full width of the content */
-  max-width: 800px; /* Consistent max-width */
-  margin: 0 auto; /* Centering the container */
-  padding: 0 20px; /* Ensure there's consistent padding */
-  box-sizing: border-box; /* Include padding in the element's width */
+  gap: 30px;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .project-card {
-  background: white;
-  padding: 30px; /* Consistent padding */
+  background: #333333;
+  padding: 30px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 100%; /* Full width of the card */
-  max-width: 800px; /* Ensure max-width is consistent with other sections */
-  opacity: 0; /* Initially hidden */
-  transform: translateY(50px); /* Slide in from below */
+  width: 100%;
+  max-width: 800px;
+  opacity: 0;
+  transform: translateY(50px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-  text-align: center; /* Center text inside the card */
+  text-align: center;
 }
 
 .project-card.visible {
-  opacity: 1; /* Fully visible when in view */
-  transform: translateY(0); /* Slide to original position */
+  opacity: 1;
+  transform: translateY(0);
 }
 
+/* Alternating background color similar to about section */
 .project-card:nth-child(even) {
-  background: #fcfbfb; /* Slightly darker grey for even cards */
+  background-color: #444444;
 }
 
 .project-card:hover {
@@ -58,15 +157,15 @@
 
 .project-card h3 {
   margin: 0;
-  font-size: 1.8rem; /* Consistent font size */
-  color: #007bff; /* Consistent color */
+  font-size: 1.8rem;
+  color: #007bff;
 }
 
 .project-card p {
-  font-size: 1.2rem; /* Consistent font size */
-  color: #666666;
-  margin: 10px 0 0; /* Better spacing around text */
-  text-align: center; /* Center the text inside the paragraph */
+  font-size: 1.2rem;
+  color: #fff; /* Consistent with the about section */
+  margin: 10px 0 0;
+  text-align: left;
 }
 
 .project-card a {
@@ -84,22 +183,22 @@
 /* Media Queries for responsive design */
 @media (min-width: 768px) {
   .project-card h3 {
-    font-size: 3rem; /* Consistent font size for larger screens */
+    font-size: 3rem;
   }
 
   .project-card p,
   .project-card a {
-    font-size: 1.5rem; /* Consistent font size for larger screens */
+    font-size: 1.5rem;
   }
 }
 
 @media (min-width: 1200px) {
   .project-card h3 {
-    font-size: 3.5rem; /* Consistent font size for larger screens */
+    font-size: 3.5rem;
   }
 
   .project-card p,
   .project-card a {
-    font-size: 1.8rem; /* Consistent font size for larger screens */
+    font-size: 1.8rem;
   }
 }
