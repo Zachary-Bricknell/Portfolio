@@ -1,7 +1,13 @@
 .experience {
-  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px; /* Adjusted padding for better layout on smaller screens */
   background: #e9ecef; /* Light grey background for the whole section */
   color: #000000;
+  width: 100%; /* Ensure the section takes the full width */
+  box-sizing: border-box; /* Include padding and border in the element's width */
 }
 
 .experience h2 {
@@ -16,10 +22,11 @@
   flex-direction: column;
   align-items: center;
   gap: 30px; /* Consistent gap */
-  width: 100%;
+  width: 100%; /* Full width of the content */
   max-width: 800px; /* Consistent max-width */
   margin: 0 auto; /* Centering the container */
   padding: 0 20px; /* Ensure there's consistent padding */
+  box-sizing: border-box; /* Include padding in the element's width */
 }
 
 .experience-card {
@@ -27,11 +34,12 @@
   padding: 30px; /* Consistent padding */
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 100%;
+  width: 100%; /* Full width of the card */
   max-width: 800px; /* Ensure max-width is consistent with Projects section */
-  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.6s ease-out, transform 0.6s ease-out;
   opacity: 0; /* Initially hidden */
   transform: translateY(50px); /* Slide in from below */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  text-align: center; /* Center text inside the card */
 }
 
 .experience-card.visible {
@@ -64,14 +72,11 @@
   font-size: 1.2rem; /* Consistent font size */
   color: #666666;
   margin: 10px 0 0; /* Better spacing around text */
+  text-align: left; /* Center the text inside the paragraph */
 }
 
 /* Media Queries for responsive design */
 @media (min-width: 768px) {
-  .experience-container {
-    justify-content: space-between;
-  }
-
   .experience-card h3 {
     font-size: 3rem; /* Consistent font size for larger screens */
   }

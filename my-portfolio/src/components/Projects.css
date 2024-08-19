@@ -1,27 +1,20 @@
-/* Initially hide the sections with a transform */
-.hidden {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-/* When visible, the sections will slide in */
-.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 .projects {
-  padding: 50px;
-  background: #2b2b2b; /* Match the black background from the About section */
-  color: #fff; /* White text color to contrast the dark background */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px; /* Adjusted padding for better layout on smaller screens */
+  background: #e9ecef; /* Light grey background for the whole section */
+  color: #000000;
+  width: 100%; /* Ensure the section takes the full width */
+  box-sizing: border-box; /* Include padding and border in the element's width */
 }
 
 .projects h2 {
   text-align: center;
   margin-bottom: 40px;
   font-size: 3.5rem; /* Consistent font size with Experience section */
-  color: #fff; /* Consistent color */
+  color: #000000; /* Consistent color */
 }
 
 .projects-container {
@@ -29,22 +22,24 @@
   flex-direction: column;
   align-items: center;
   gap: 30px; /* Consistent gap */
-  width: 100%;
+  width: 100%; /* Full width of the content */
   max-width: 800px; /* Consistent max-width */
   margin: 0 auto; /* Centering the container */
   padding: 0 20px; /* Ensure there's consistent padding */
+  box-sizing: border-box; /* Include padding in the element's width */
 }
 
 .project-card {
-  background: #333333; /* Dark background for the card */
+  background: white;
   padding: 30px; /* Consistent padding */
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 800px; /* Ensure max-width is consistent with Experience section */
-  opacity: 0; /* Hidden by default for scroll transition effect */
+  width: 100%; /* Full width of the card */
+  max-width: 800px; /* Ensure max-width is consistent with other sections */
+  opacity: 0; /* Initially hidden */
   transform: translateY(50px); /* Slide in from below */
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  text-align: center; /* Center text inside the card */
 }
 
 .project-card.visible {
@@ -53,7 +48,7 @@
 }
 
 .project-card:nth-child(even) {
-  background: #444444; /* Alternating background color for even cards */
+  background: #fcfbfb; /* Slightly darker grey for even cards */
 }
 
 .project-card:hover {
@@ -62,25 +57,24 @@
 }
 
 .project-card h3 {
-  margin-top: 0;
+  margin: 0;
   font-size: 1.8rem; /* Consistent font size */
   color: #007bff; /* Consistent color */
-  text-align: center; /* Center align the title */
 }
 
 .project-card p {
   font-size: 1.2rem; /* Consistent font size */
-  color: #fff; /* Lighter color for better readability on dark background */
-  text-align: left; /* Left align the text for better readability */
+  color: #666666;
+  margin: 10px 0 0; /* Better spacing around text */
+  text-align: center; /* Center the text inside the paragraph */
 }
 
 .project-card a {
-  text-decoration: none;
+  margin-top: 20px;
+  display: inline-block;
+  font-size: 1.2rem;
   color: #007bff;
-  font-weight: bold;
-  margin-top: 20px; /* Increased margin for better spacing */
-  display: block;
-  text-align: center; /* Center align the link */
+  text-decoration: none;
 }
 
 .project-card a:hover {
@@ -89,15 +83,12 @@
 
 /* Media Queries for responsive design */
 @media (min-width: 768px) {
-  .projects-container {
-    justify-content: space-between;
-  }
-
   .project-card h3 {
     font-size: 3rem; /* Consistent font size for larger screens */
   }
 
-  .project-card p {
+  .project-card p,
+  .project-card a {
     font-size: 1.5rem; /* Consistent font size for larger screens */
   }
 }
@@ -107,7 +98,8 @@
     font-size: 3.5rem; /* Consistent font size for larger screens */
   }
 
-  .project-card p {
+  .project-card p,
+  .project-card a {
     font-size: 1.8rem; /* Consistent font size for larger screens */
   }
 }

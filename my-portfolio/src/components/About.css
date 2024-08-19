@@ -1,81 +1,79 @@
-/* Initially hide the sections with a transform */
-.hidden {
+.about-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px; /* Reduced padding for better alignment on smaller screens */
+  background-color: #2b2b2b;
+  color: #fff;
+  width: 100%; /* Ensure the section takes the full width */
+  box-sizing: border-box; /* Include padding and border in the element's width */
+}
+
+.profile-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Full width to ensure centering */
+}
+
+.profile-picture {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 100%; /* Full width of the content */
+  max-width: 800px; /* Max width to control the content layout */
+  margin: 20px auto 0; /* Auto margin for centering */
+  padding: 0 20px; /* Padding for small screens */
+  box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+.about-section-content {
+  background-color: #333333;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Full width for the content section */
+  max-width: 800px; /* Max width for content consistency */
   opacity: 0;
   transform: translateY(50px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-/* When visible, the sections will slide in */
-.visible {
+.about-section-content.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-.about-section {
-  padding: 60px 50px;
-  background-color: #2b2b2b; /* Consistent background color */
-  color: #fff;
-}
-
-.about-section h2 {
-  margin-top: 0;
-  font-size: 3.5rem; /* Consistent font size */
-  color: #007bff;
-  text-align: center; /* Center align the title */
-}
-
-/* About Section Content */
-.about-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px; /* Consistent gap */
-  width: 100%;
-  max-width: 800px; /* Consistent max-width */
-  margin: 0 auto; /* Centering the content */
-  padding: 0 20px; /* Ensure there's consistent padding */
-}
-
-/* Card Styling */
-.about-section-content {
-  background-color: #333333; /* Dark background for the card */
-  padding: 30px; /* Consistent padding */
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 800px; /* Ensure max-width is consistent with other sections */
-  opacity: 0; /* Hidden by default for scroll transition effect */
-  transform: translateY(50px); /* Slide in from below */
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.about-section-content.visible {
-  opacity: 1; /* Fully visible when in view */
-  transform: translateY(0); /* Slide to original position */
-}
-
 .about-section-content.alternate {
-  background-color: #444444; /* Alternating background color for even cards */
+  background-color: #444444;
 }
 
 .about-section-content:hover {
   transform: translateY(-10px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Add hover effect similar to Projects/Experience sections */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .about-section-content h2 {
-  font-size: 1.8rem; /* Consistent font size */
+  font-size: 1.8rem;
   color: #007bff;
-  text-align: center; /* Center align the title */
+  text-align: center;
 }
 
 .about-section-content p {
-  font-size: 1.2rem; /* Consistent font size */
+  font-size: 1.2rem;
   color: #fff;
-  margin: 10px 0 0; /* Consistent spacing */
+  margin: 10px 0 0;
 }
 
-/* Media queries for responsive design */
 @media (min-width: 768px) {
   .about-section-content h2 {
     font-size: 3rem;

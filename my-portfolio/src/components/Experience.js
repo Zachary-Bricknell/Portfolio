@@ -29,7 +29,7 @@ const Experience = () => {
           }
         });
       },
-      { threshold: 1 }
+      { threshold: .6 }
     );
 
     experienceRefs.current.forEach((experience) => {
@@ -59,7 +59,7 @@ const Experience = () => {
           >
             <h3>{exp.company}</h3>
             <h4>{exp.role}</h4>
-            <p><strong>{exp.duration}</strong></p>
+            <h4><strong>{exp.duration}</strong></h4>
             <p>{exp.description}</p>
           </div>
         ))}

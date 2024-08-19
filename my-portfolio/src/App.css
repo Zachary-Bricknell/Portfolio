@@ -1,28 +1,4 @@
-body, html {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  scroll-behavior: smooth;
-  background-color: #1b1b1b;
-  color: #fff;
-  overflow-x: hidden; /* Prevent horizontal overflow */
-}
-
-.App {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  overflow-x: hidden; /* Prevent horizontal overflow */
-}
-
-body {
-  margin: 0;
-  font-family: 'Arial', sans-serif;
-  scroll-behavior: smooth;
-  background-color: #1b1b1b;
-  color: #fff;
-}
-
+/* Navbar */
 .navbar {
   position: fixed;
   top: 0;
@@ -31,34 +7,45 @@ body {
   padding: 15px;
   text-align: center;
   z-index: 1000;
-  overflow: hidden; /* Ensure the navbar doesn’t cause overflow */
-  box-sizing: border-box; /* Ensure padding is included in the width calculation */
+  box-sizing: border-box;
 }
 
-.navbar a {
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-links a {
   margin: 0 15px;
   text-decoration: none;
   color: #fff;
   font-size: 1.2rem;
 }
 
-.navbar a:hover {
-  color: #6c63ff;
-}
+/* Responsive styling */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
 
-section {
-  padding: 60px 50px;
-}
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    margin-top: 10px;
+  }
 
-.about-section,
-.projects-section,
-.experience-section,
-.contact-section {
-  min-height: 100vh;
-}
+  .nav-links.open {
+    display: flex;
+  }
 
-/* Additional resets or adjustments */
-* {
-  box-sizing: border-box; /* Ensures padding and border are included in width/height */
+  .nav-links a {
+    margin: 10px 0;
+  }
 }
-

@@ -1,20 +1,28 @@
 .contact {
-  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px; /* Adjusted padding for better layout on smaller screens */
   background: #f5f5f5; /* Light grey background */
-  text-align: center;
   color: #000000;
+  width: 100%; /* Ensure the section takes the full width */
+  box-sizing: border-box; /* Include padding and border in the element's width */
+  text-align: center; /* Center text inside the section */
 }
 
 .contact h2 {
   margin-bottom: 40px;
   font-size: 3.5rem; /* Consistent font size for h2 */
   color: #007bff; /* Matching color with other sections */
+  text-align: center; /* Ensure header is centered */
 }
 
 .contact p {
   font-size: 1.2rem; /* Consistent paragraph font size */
   color: #666666; /* Consistent color with other sections */
   margin-bottom: 20px;
+  text-align: center; /* Center the paragraph text */
 }
 
 .contact-form {

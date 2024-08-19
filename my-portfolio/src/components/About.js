@@ -14,7 +14,7 @@ const About = () => {
           }
         });
       },
-      { threshold: 1 } // Trigger when 10% of the element is in view
+      { threshold: .6 } // Trigger when 10% of the element is in view
     );
 
     aboutSectionsRef.current.forEach((section) => {
@@ -35,7 +35,7 @@ const About = () => {
   }, []);
 
   return (
-    <section id="about" className="about-section">
+    <div id="about" className="about-section">
       <div className="profile-section">
         <img src={profilePicture} alt="Zach's Profile" className="profile-picture" />
       </div>
@@ -69,7 +69,7 @@ const About = () => {
           </p>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
