@@ -6,7 +6,13 @@ import './Hero.css';
 import cloud1 from '../assets/images/cloud1.png';
 import cloud2 from '../assets/images/cloud2.png';
 import cloud3 from '../assets/images/cloud3.png';
-import gcloud from '../assets/images/gcloud_2.png'; // Import your image
+import gcloud from '../assets/images/gcloud_2.png'; 
+import contactIcon from '../assets/images/contact.png';
+import resumeIcon from '../assets/images/resume.png';
+import githubIcon from '../assets/images/github.png';
+import linkedinIcon from '../assets/images/linkedin.png';
+import portfolioPDF from '../assets/files/ZacharyBricknell.pdf';
+
 
 const cloudImages = [cloud1, cloud2, cloud3];
 
@@ -77,7 +83,7 @@ const Hero = () => {
   return (
     <div className="hero">
       <div className="clouds" ref={cloudContainerRef}></div>
-      <div  className="hero-content" style={{ backgroundImage: `url(${gcloud})`, backgroundSize: 'cover' }}>
+      <div className="hero-content" style={{ backgroundImage: `url(${gcloud})`, backgroundSize: 'cover' }}>
         <h1>Hi, it's <span className="name-highlight">Zach</span>.</h1>
         <p>
           <span>I'm a</span>
@@ -94,6 +100,21 @@ const Hero = () => {
             />
           </span>
         </p>
+      </div>
+      {/* Icons positioned outside of hero-content */}
+      <div className="icon-container">
+      <a href="mailto:zach14253@gmail.com">
+        <img src={contactIcon} alt="Contact" className="icon" />
+      </a>
+        <a href={portfolioPDF} download="ZacharyBricknell.pdf">
+          <img src={resumeIcon} alt="Portfolio" className="icon" />
+        </a>
+        <a href="https://github.com/Zachary-Bricknell" target="_blank" rel="noopener noreferrer">
+          <img src={githubIcon} alt="GitHub" className="icon" />
+        </a>
+        <a href="https://www.linkedin.com/in/zachary-bricknell/" target="_blank" rel="noopener noreferrer">
+          <img src={linkedinIcon} alt="LinkedIn" className="icon" />
+        </a>
       </div>
     </div>
   );
